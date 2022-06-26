@@ -1,0 +1,8 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "Iosevka  15";
+ combi-modi: "window,drun,ssh";
+ }
+@import "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+
