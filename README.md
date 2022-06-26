@@ -19,4 +19,4 @@ My config files for:
 ## Note
 
 - I'm creating symlink to ```~/.config``` from this repo.
-- Also, there is ```zprofile``, which I'm manualy replacing on my machine.
+- Also, there is ```zprofile```, which I'm manualy replacing on my machine.
