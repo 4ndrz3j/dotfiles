@@ -2,7 +2,7 @@
 # i3wm is responsible for running things
 
 # Creating symlink to zshrc
-ln -s ~/.config/zsh/zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 
 # Running i3
 
