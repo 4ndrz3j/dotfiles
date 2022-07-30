@@ -1,5 +1,6 @@
 # Ignore all
 /*
+/zsh/oh-my-zsh
 
 # Except
 !.gitignore
