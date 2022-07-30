@@ -1,0 +1,14 @@
+# Ignore all
+/*
+
+# Except
+!.gitignore
+!README.md
+!rice_v1.png
+!zsh
+!i3
+!rofi
+!compton
+!alacritty
+!wallpaper
+!zprofile
