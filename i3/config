@@ -22,7 +22,7 @@ bindsym $mod+Shift+q kill
 bindsym Print exec flameshot gui
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+d exec "rofi -show drun -show-icons"
 
 # Launch Librewolf
 bindsym $mod+F2 exec "librewolf"

@@ -4,6 +4,10 @@
 # Creating symlink to zshrc
 ln -s ~/git/dotfiles/zsh/zshrc ~/.zshrc
 
+# Set pl keyboard layout
+
+setxkbmap pl
+
 # Running i3
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
