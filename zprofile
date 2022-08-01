@@ -4,9 +4,6 @@
 # Creating symlink to zshrc
 ln -s ~/git/dotfiles/zsh/zshrc ~/.zshrc
 
-# Set pl keyboard layout
-
-setxkbmap pl
 
 # Running i3
 
