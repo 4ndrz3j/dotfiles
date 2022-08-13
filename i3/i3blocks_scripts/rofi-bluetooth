@@ -202,9 +202,9 @@ print_status() {
                 ((counter++))
             fi
         done
-        printf "\n"
+        printf ''
     else
-        echo ""
+        printf ''
     fi
 }
 

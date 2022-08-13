@@ -139,6 +139,7 @@ bar {
             focused_workspace #282A3E88 #282A3E88 #FFFFFF
             statusline #E6FFF5
         }
+	tray_output primary
 }
 
 # i3-gaps
@@ -157,6 +158,10 @@ exec_always --no-startup-id feh --no-fehbg --bg-fill ~/.config/wallpaper/wallpap
 
 # compton - Compositing Manager for Shadows and Opacity
 exec_always --no-startup-id compton -b --config ~/.config/compton/compton.conf
+
+
+# Bluetooth fix - https://bbs.archlinux.org/viewtopic.php?pid=2011077#p2011077
+exec_always --no-startup-id systemctl start --user pulseaudio
 
 exec --no-startup-id nm-applet
 
