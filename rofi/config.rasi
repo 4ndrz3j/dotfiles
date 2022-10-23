@@ -3,6 +3,7 @@ configuration {
  font: "Iosevka  15";
  combi-modi: "window,drun,ssh";
  }
-@import "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+@import "Arc-Dark.rasi"
 
 

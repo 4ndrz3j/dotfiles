@@ -172,6 +172,9 @@ exec_always --no-startup-id systemctl start --user pulseaudio
 
 exec_always --no-startup-id dunst &
 
+# Set polish keyboard laoyout
+exec --no-startup-id setxkbmap pl
+
 exec --no-startup-id nm-applet
 exec --no-startup-id xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c 000000 --nofork
 
