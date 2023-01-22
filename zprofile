@@ -2,7 +2,7 @@
 # i3wm is responsible for running things
 
 # Creating symlink to zshrc
-ln -s ~/git/dotfiles/zsh/zshrc ~/.zshrc
+export ZDOTDIR="$HOME/git/dotfiles/zsh"
 
 
 # Running i3
@@ -10,4 +10,3 @@ ln -s ~/git/dotfiles/zsh/zshrc ~/.zshrc
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx /usr/bin/i3
 fi
-
