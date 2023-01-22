@@ -87,6 +87,6 @@ alias ls='ls --color=auto'
 bindkey "^[[3~" delete-char
 
 # Load zsh-syntax-highlighting; should be last.
-source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source $ZDOTDIR/plugins/zsh-syntax-highlighting2/zsh-syntax-highlighting.zsh 2>/dev/null
 
 
