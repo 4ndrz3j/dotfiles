@@ -8,7 +8,7 @@ My config files for:
   - i3wm
   - i3block
 - rofi
-- zsh + OhMyZsh
+- zsh
 - dunst
 
 ## TODOS

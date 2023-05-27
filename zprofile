@@ -1,9 +1,14 @@
 # This file is used to startup window manager. After that
 # i3wm is responsible for running things
 
-# Creating symlink to zshrc
-export ZDOTDIR="$HOME/git/dotfiles/zsh"
+# Place where is your config sotred is... :
+export CONFIGDIR="$HOME/.config"
 
+# Place where is your .zshrc
+export ZDOTDIR="$CONFIGDIR/zsh"
+
+# Set path for scripts
+export PATH=$PATH:$CONFIGDIR/scripts
 
 # Running i3
 

@@ -1,5 +1,5 @@
-# Luke's config for the Zoomer Shell
-#
+# Luke's config for the Zoomer Shell + Some twekas by mee
+
 
 # git prompt
 parse_git_branch() {
@@ -15,7 +15,7 @@ autoload -U promptinit && promptinit
 #Enable colors and change prompt:
 autoload -U colors && colors
 #Prompt
-TRIANGLE="$'\uE0B0'"
+TRIANGLE="\uE0B0"
 PROMPT='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M%{$fg[white]%}:%{$fg[cyan]%}$(time_with_seconds) %{$fg[magenta]%}%~%{$fg[red]%}]%F{green}%}$(parse_git_branch)%{%F{none}%}$TRIANLGE%{$reset_color%}$%b '
 
 # History in cache directory:
@@ -41,6 +41,18 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
+# ctrl+left/right/ word hopping
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# Home/End buttons
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+
+# bind del to delete
+bindkey "^[[3~" delete-char
+
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
@@ -53,27 +65,6 @@ function zle-keymap-select {
     echo -ne '\e[5 q'
   fi
 }
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
-}
-zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -82,10 +73,9 @@ bindkey '^e' edit-command-line
 
 alias dockerpurge='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker rmi $(docker images -q)'
 alias vim=nvim
+alias o='xdg-open'
 alias ls='ls --color=auto'
-# bind del to delete
-bindkey "^[[3~" delete-char
-
+alias cal='cal --monday'
 # Load zsh-syntax-highlighting; should be last.
 source $ZDOTDIR/plugins/zsh-syntax-highlighting2/zsh-syntax-highlighting.zsh 2>/dev/null
 
