@@ -167,7 +167,7 @@ exec sh -c "xrandr --output DP-1-2 --right-of eDP-1 ; xrandr --output HDMI-1 --r
 exec_always --no-startup-id feh --no-fehbg --bg-fill ~/.config/wallpaper/wallpaper_1.jpg
 
 # compton - Compositing Manager for Shadows and Opacity
-exec_always --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec_always --no-startup-id picom -b --config ~/.config/compton/compton.conf
 
 
 # Bluetooth fix - https://bbs.archlinux.org/viewtopic.php?pid=2011077#p2011077
