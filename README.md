@@ -3,13 +3,21 @@
 
 My config files for:
 - alacritty
-- compton
+- compton (depracated)
 - i3
   - i3wm
   - i3block
 - rofi
 - zsh
 - dunst
+
+## Startup script
+
+Running programs on start was moved from i3 config, to traditional script. 
+Right now script located at ```script/startup_script.sh``` is used to launch
+programs.
+
+This was made, to make configuration files more i3 independent.
 
 ## TODOS
 

@@ -160,29 +160,33 @@ client.unfocused #333333 #333333 #888888
 client.urgent #900000 #900000 #ffffff
 default_border normal
 
+
+# Depracated - to be removed
 # Monitor setup
-exec sh -c "xrandr --output DP-1-2 --right-of eDP-1 ; xrandr --output HDMI-1 --rotate left --left-of eDP-1 --mode 1920x1080"
+#exec sh -c "xrandr --output DP-1-2 --right-of eDP-1 ; xrandr --output HDMI-1 --rotate left --left-of eDP-1 --mode 1920x1080"
 
 # feh - Wallpaper Setter
-exec_always --no-startup-id feh --no-fehbg --bg-fill ~/.config/wallpaper/wallpaper_1.jpg
+#exec_always --no-startup-id feh --no-fehbg --bg-fill ~/.config/wallpaper/wallpaper_1.jpg
 
 # compton - Compositing Manager for Shadows and Opacity
-exec_always --no-startup-id picom -b --config ~/.config/compton/compton.conf
+#exec_always --no-startup-id picom -b --config
 
 
 # Bluetooth fix - https://bbs.archlinux.org/viewtopic.php?pid=2011077#p2011077
-exec_always --no-startup-id systemctl start --user pulseaudio
+#exec_always --no-startup-id systemctl start --user pulseaudio
 
-exec_always --no-startup-id dunst &
+#exec_always --no-startup-id dunst &
 
 # Set polish keyboard laoyout
-exec --no-startup-id setxkbmap pl
+#exec --no-startup-id setxkbmap pl
 
-exec --no-startup-id nm-applet
-exec --no-startup-id xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c 000000 --nofork
+#exec --no-startup-id nm-applet
+#exec --no-startup-id xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c 000000 --nofork
 
 # Resize Bindings
 bindsym $mod+Ctrl+Shift+Right resize shrink width 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Up resize grow height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
+
+exec sh ~/.config/scripts/startup_script.sh
