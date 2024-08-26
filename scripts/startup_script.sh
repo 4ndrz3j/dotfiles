@@ -24,6 +24,6 @@ if [[ $VM == false ]]; then
     # Set keyboard scheme
     setxkbmap pl 
     # screen lock
-    xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c 000000 --nofork
+    xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c 000000 --nofork;
     nm-applet &    
 fi
