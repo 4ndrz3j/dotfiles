@@ -11,6 +11,8 @@ if [[ $VM == true ]]; then
     setxkbmap pl 
     # screen lock
     xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c ff06b5 --nofork
+    # Run spiece-vdagent to allow copy&paste text between machines. Change spice address to 'none'
+    spice-vdagent &
     nm-applet &
     fi
 
