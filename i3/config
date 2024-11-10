@@ -24,8 +24,8 @@ bindsym Print exec flameshot gui
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -show drun -show-icons"
 
-# Launch Librewolf
-bindsym $mod+F2 exec "waterfox"
+# Launch mercury
+bindsym $mod+F2 exec "mercury-browser"
 
 # Screen lock (change color)
 bindsym $mod+l exec i3lock -eu -c 000000

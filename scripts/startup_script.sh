@@ -12,9 +12,10 @@ if [[ $VM == true ]]; then
     # screen lock
     xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c ff06b5 --nofork
     # Run spiece-vdagent to allow copy&paste text between machines. Change spice address to 'none'
-    spice-vdagent &
-    nm-applet &
-    fi
+    sh -c "spice-vdagent &" &  
+    sh -c "nm-applet &" &
+
+fi
 
 if [[ $VM == false ]]; then
     # Run compositor
@@ -24,8 +25,8 @@ if [[ $VM == false ]]; then
     # Run dunst
     dunst &
     # Set keyboard scheme
-    setxkbmap pl 
+    setxkbmap pl &
     # screen lock
     xset s on; xset s 600 605 ; xss-lock --transfer-sleep-lock -- i3lock -eu -c 000000 --nofork;
-    nm-applet &    
+    sh -c "nm-applet &" &
 fi

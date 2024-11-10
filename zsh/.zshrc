@@ -10,6 +10,8 @@ time_with_seconds(){
     date +%T
 }
 
+source ~/.config/scripts/functions.zsh
+
 setopt PROMPT_SUBST
 autoload -U promptinit && promptinit
 #Enable colors and change prompt:
