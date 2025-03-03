@@ -25,7 +25,7 @@ bindsym Print exec flameshot gui
 bindsym $mod+d exec "rofi -show drun -show-icons"
 
 # Launch mercury
-bindsym $mod+F2 exec "mercury-browser"
+bindsym $mod+F2 exec "librewolf"
 
 # Screen lock (change color)
 bindsym $mod+l exec i3lock -eu -c 000000
