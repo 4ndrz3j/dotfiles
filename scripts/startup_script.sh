@@ -2,9 +2,9 @@ VM=false
 
 if [[ $VM == true ]]; then
     # Run compositor
-    picom -b --backend xrender --no-vsync
+    #picom -b --backend xrender --no-vsync
     # Set wallpaper
-    feh --no-fehbg --bg-fill ~/.config/wallpaper/wallpaper_2.jpg
+    feh --no-fehbg --bg-fill ~/.config/wallpaper/wallpaper_2.png
     # Run dunst
     dunst &
     # Set keyboard scheme
